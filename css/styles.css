@@ -338,7 +338,7 @@ html{
 }
 
 .contenedor{
-    width: auto;
+    width: 80%;
     margin: 0 auto 0 auto;
 }
 
@@ -381,7 +381,7 @@ html{
 /* footer */
 
 .contenedorFooter{
-    margin-top: 150px;
+    margin-top: 30px;
     height: auto;
     max-width: 100%;
     background-color: #ECC47C;
@@ -532,9 +532,92 @@ html{
     margin: 10px 0;
 }
 
+/* servicios */
+
+.fondoServicios{
+    color: rgb(255, 197, 90)
+}
+
 .h2Servicios{
     text-align: center;
-    margin-top: 60px;
+    margin: 30px 0;
+}
+
+.contenedorForm{
+    width: 80%;
+    border: 1px solid #ECC47C;
+    margin: 0 auto;
+    background-color: rgb(73, 73, 73);
+}
+
+.escritorio{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenidoServicio{
+    margin: 10px 0;
+}
+
+.contenedorCajaFormServicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cajaFormServicio{
+    margin: 10px 0;
+    width: 100%;
+}
+
+.cajaFormServicio select, .cajaFormServicio input{
+    margin: 10px 0;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #ECC47C;
+    padding: 5px;
+    color: #ECC47C;
+    background-color: rgb(73, 73, 73); 
+    font-size: 1rem;
+}
+
+.cajaFormServicio input:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cajaFormServicio input::placeholder{
+    color: #ECC47C;
+    font-size: 1rem;
+}
+
+.cajaFormServicio input:focus{
+    outline: none;
+    font-size: 1rem;
+}
+
+.cajaFormServicio select:focus{
+    outline: none;
+    
+}
+
+.cajaFormServicio label{
+    color: #ECC47C;
+    font-weight: bold;
+}
+
+.contenidoServicio .enviarBtn input{
+    padding: 10px;
+    border: 1px solid #ECC47C;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenidoServicio .enviarBtn input:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* sobre nosotros */
@@ -1100,6 +1183,86 @@ textarea::-webkit-scrollbar{
         width: 80%;
     }
 
+    /* servicios */
+
+    .fondoServicios{
+        height: 300px;
+        background-position: calc(100% - 30%);
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .escritorio{
+        flex-direction: column;
+    }
+
+    .h2Servicios{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .contenedorForm{
+        margin: 10px auto;
+        width: 80%;
+        border: 1px solid #ECC47C;
+        background-color: rgb(73, 73, 73);
+    }
+
+    .contenidoServicio{
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .contenedorCajaFormServicio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cajaFormServicio{
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    .cajaFormServicio select, .cajaFormServicio input{
+        margin: 10px 0;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ECC47C;
+        padding: 5px;
+        color: #ECC47C;
+        background-color: rgb(73, 73, 73); 
+        font-size: 1rem;
+    }
+
+    .cajaFormServicio input::placeholder{
+        color: #ECC47C;
+        font-size: 1rem;
+    }
+
+    .cajaFormServicio input:focus{
+        outline: none;
+        font-size: 1rem;
+    }
+
+    .cajaFormServicio select:focus{
+        outline: none;
+    }
+
+    .cajaFormServicio label{
+        color: #ECC47C;
+        font-weight: bold;
+    }
+
+    .contenidoServicio .enviarBtn input{
+        padding: 10px;
+        border: 1px solid #ECC47C;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
     /* contacto */
 
     .tituloContacto h1{
@@ -1424,6 +1587,86 @@ textarea::-webkit-scrollbar{
 
     .cajaPreguntas p{
         font-size: .9rem;
+    }
+
+    /* servicios */
+
+    .fondoServicios{
+        height: 300px;
+        background-position: calc(100% - 30%);
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .escritorio{
+        flex-direction: column;
+    }
+
+    .h2Servicios{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .contenedorForm{
+        margin: 10px auto;
+        width: 80%;
+        border: 1px solid #ECC47C;
+        background-color: rgb(73, 73, 73);
+    }
+
+    .contenidoServicio{
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .contenedorCajaFormServicio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cajaFormServicio{
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    .cajaFormServicio select, .cajaFormServicio input{
+        margin: 10px 0;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ECC47C;
+        padding: 5px;
+        color: #ECC47C;
+        background-color: rgb(73, 73, 73); 
+        font-size: 1rem;
+    }
+
+    .cajaFormServicio input::placeholder{
+        color: #ECC47C;
+        font-size: 1rem;
+    }
+
+    .cajaFormServicio input:focus{
+        outline: none;
+        font-size: 1rem;
+    }
+
+    .cajaFormServicio select:focus{
+        outline: none;
+    }
+
+    .cajaFormServicio label{
+        color: #ECC47C;
+        font-weight: bold;
+    }
+
+    .contenidoServicio .enviarBtn input{
+        padding: 10px;
+        border: 1px solid #ECC47C;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     /* sobre nosotros */
