@@ -28,7 +28,7 @@ html{
         justify-content: center;
         margin: 0 10px 0 10px;
     }
-    
+
     .nav a.titulo h1{
         color: #fff;
     }
@@ -55,6 +55,7 @@ html{
     .nav a:hover{
         background-color: #fff;
         color: #ECC47C;
+        transition: ease .8s;
     }
 
 /* formulario y fondo */
@@ -235,8 +236,8 @@ html{
 }
 
 .box:hover{
-    padding: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: translateY(-30px);
+    transition: ease-in-out .8s;
 }
 
 .box p{
@@ -325,6 +326,7 @@ html{
     color: #CDA291;
     background-color: #fff;
     border: 2px solid #CDA291;
+    transition: ease .8s;
 }
 
 /* section */
