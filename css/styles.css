@@ -55,6 +55,7 @@ html{
     .nav a:hover{
         background-color: #fff;
         color: #ECC47C;
+        transition: ease-in-out .8s;
     }
 
 /* formulario y fondo */
