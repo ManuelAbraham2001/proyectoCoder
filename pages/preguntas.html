@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <title>PropUp Inmobiliaria</title>
 </head>
 <body>
     <!--header-->
     <header>
-        <nav class="nav">
-            <a class="titulo" href="../index.html"><h1>Prop<span>Up</span></h1></a>
-            <div class="enlaces">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+        <nav class="navbar navbar-expand-md navbar-dark bg-color sticky-top">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><h1>Prop<span>Up</span></h1></a>
+    
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+    
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/preguntas.html">Preguntas Frecuentes</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -27,73 +46,111 @@
 
     <main>
         <div class="preguntasTitulo">
-            <h2>Preguntas frecuentes</h2>
-        </div>
-        <div class="contenedorPreguntas">
-            <div class="cajaPreguntas">
-                <h3>Alquiler</h3>
-                <h4>¿Qué requisitos se necesitan para alquilar una propiedad?</h4>
-                <p>
-                    Los requisitos necesarios para alquilar una propiedad son:
-                    Justificación de ingresos que refleje poder cubrir con el monto del alquiler.
-                    Garantía Propietaria de capital o de provincia.
-                    Aprobación en el score del Veraz.
-                    En el caso de no contar con garantía propietaria, y si el dueño accede a esta posibilidad, también es válido el seguro de caución.
-                </p>
-            </div>
-    
-            <div class="cajaPreguntas">
-                <h3>Documentacion</h3>
-                <h4>¿Qué documentación se requiere para poder poner en venta una propiedad?</h4>
-                <p>
-                    Los requisitos que se necesitan para poner en venta una propiedad son:
-                    Escritura de la propiedad.
-                    Plano de obra.
-                    Reglamento de copropiedad en el caso de que fuese Propiedad Horizontal.
-                    Firma de la autorización de venta por un mínimo de 90 días corridos.
-                </p>
-            </div>
+            <h1>Preguntas frecuentes</h1>
         </div>
 
-        <div class="contenedorPreguntas">
-            <div class="cajaPreguntas">
-                <h3>Publicitamos</h3>
-                <h4>¿En qué medios publicitamos las propiedades?</h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolores dolor quas. Maiores exercitationem aliquam cupiditate repellat laborum obcaecati voluptatem illo, cumque, suscipit temporibus tempore sapiente ducimus minima culpa, omnis voluptatibus quasi dolore. Fuga quam, debitis aliquam minima pariatur voluptatem rerum quasi nam, architecto aliquid dignissimos necessitatibus voluptatum, aspernatur officia.
-                </p>
-            </div>
-    
-            <div class="cajaPreguntas">
-                <h3>Credito bancario</h3>
-                <h4>¿Qué se requiere para que una propiedad pueda ser comprada por crédito bancario?</h4>
-                <p>
-                    Para que una propiedad pueda ser comprada por crédito bancario se requiere que todos los metros construidos figuren en el plano de obra correspondiente.
-                    La propiedad debe estar a nombre de su titular.
-                    Su titular no puede estar inhibido. Si la propiedad está ubicada en provincia se debe hacer un estado parcelario previo hecho por agrimensor matriculado, requisito que no se requiere para propiedades de Capital Federal. En el caso de que se esté tramitando una sucesión, se requiere que esté hecha la declaratoria de herederos.
-                </p>
+        <div class="contenedorTest">
+            <div class="colapso">
+                <h2>Alquiler</h2>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                    <h3>¿Qué requisitos se necesitan para alquilar una propiedad?</h3>
+                  </button>
+                <div class="collapse" id="collapseExample1">
+                  <div class="card card-body text-left">
+                    <p>
+                        Los requisitos necesarios para alquilar una propiedad son:
+                        Justificación de ingresos que refleje poder cubrir con el monto del alquiler.
+                        Garantía Propietaria de capital o de provincia.
+                        Aprobación en el score del Veraz.
+                        En el caso de no contar con garantía propietaria, y si el dueño accede a esta posibilidad, también es válido el seguro de caución.
+                    </p>
+                  </div>
+                </div>
             </div>
         </div>
-
-        <div class="contenedorPreguntas">
-            <div class="cajaPreguntas">
-                <h3>Impuesto de sellos</h3>
-                <h4>¿Qué es el Impuesto de Sellos?</h4>
-                <p>
-                    El Impuesto de Sellos es un tributo que grava actos jurídicos onerosos instrumentados, dependiendo el tipo de instrumento: Contrato de alquiler residencial (GBA): 0,5% Contrato de alquiler comercial (GBA y CABA): 1,2% Escritura de compra venta: 3,6% La alícuota mencionada debe ser aplicada sobre el valor fiscal ó valor de escrituración y/o sobre el valor inmobiliario de referencia (V.I.R.), el que resulte mayor; en el
-                    caso de los contratos de alquiler, la base imponible es la totalidad del contrato IVA incluído. En el caso de las escrituras, se encuentran exentos los inmuebles destinados a vivienda permanente y que constituyen la única propiedad en cabeza de cada uno de los adquirentes, y siempre que el valor de escrituración no sea mayor a los $750.000. Aquellas operaciones que estén excentas pero que superen el monto recientemente señalado, tributarán solo por el excedente. Generalmente el costo del impuesto es soportado y abonado por partes iguales entre comprador y vendedor; o locador y locatario.
-                </p>
+        <div class="contenedorTest">
+            <div class="colapso">
+                <h2>Documentacion</h2>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                    <h3>¿Qué documentación se requiere para poder poner en venta una propiedad?</h3>
+                  </button>
+                <div class="collapse" id="collapseExample2">
+                  <div class="card card-body text-left">
+                    <p>
+                        Los requisitos que se necesitan para poner en venta una propiedad son:
+                        Escritura de la propiedad.
+                        Plano de obra.
+                        Reglamento de copropiedad en el caso de que fuese Propiedad Horizontal.
+                        Firma de la autorización de venta por un mínimo de 90 días corridos.
+                    </p>
+                  </div>
+                </div>
             </div>
-
-            <div class="cajaPreguntas">
-                <h3>Credito bancario</h3>
-                <h4>¿Qué se requiere para que una propiedad pueda ser comprada por crédito bancario?</h4>
-                <p>
-                    Para que una propiedad pueda ser comprada por crédito bancario se requiere que todos los metros construidos figuren en el plano de obra correspondiente.
-                    La propiedad debe estar a nombre de su titular.
-                    Su titular no puede estar inhibido. Si la propiedad está ubicada en provincia se debe hacer un estado parcelario previo hecho por agrimensor matriculado, requisito que no se requiere para propiedades de Capital Federal. En el caso de que se esté tramitando una sucesión, se requiere que esté hecha la declaratoria de herederos.
-                </p>
+        </div>
+        <div class="contenedorTest">
+            <div class="colapso">
+                <h2>Publicitamos</h2>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                    <h3>¿En qué medios publicitamos las propiedades?</h3>
+                  </button>
+                <div class="collapse" id="collapseExample3">
+                  <div class="card card-body text-left">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolores dolor quas. Maiores exercitationem aliquam cupiditate repellat laborum obcaecati voluptatem illo, cumque, suscipit temporibus tempore sapiente ducimus minima culpa, omnis voluptatibus quasi dolore. Fuga quam, debitis aliquam minima pariatur voluptatem rerum quasi nam, architecto aliquid dignissimos necessitatibus voluptatum, aspernatur officia.
+                    </p>
+                  </div>
+                </div>
             </div>
+        </div>
+        <div class="contenedorTest">
+            <div class="colapso">
+                <h2>Credito bancario</h2>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                    <h3>¿Qué se requiere para que una propiedad pueda ser comprada por crédito bancario?</h3>
+                  </button>
+                <div class="collapse" id="collapseExample4">
+                  <div class="card card-body text-left">
+                    <p>
+                        Para que una propiedad pueda ser comprada por crédito bancario se requiere que todos los metros construidos figuren en el plano de obra correspondiente.
+                        La propiedad debe estar a nombre de su titular.
+                        Su titular no puede estar inhibido. Si la propiedad está ubicada en provincia se debe hacer un estado parcelario previo hecho por agrimensor matriculado, requisito que no se requiere para propiedades de Capital Federal. En el caso de que se esté tramitando una sucesión, se requiere que esté hecha la declaratoria de herederos.
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedorTest">
+            <div class="colapso">
+                <h2>Impuesto de sellos</h2>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+                    <h3>¿Qué es el Impuesto de Sellos?</h3>
+                  </button>
+                <div class="collapse" id="collapseExample5">
+                    <div class="card card-body text-left">
+                        <p>
+                            El Impuesto de Sellos es un tributo que grava actos jurídicos onerosos instrumentados, dependiendo el tipo de instrumento: Contrato de alquiler residencial (GBA): 0,5% Contrato de alquiler comercial (GBA y CABA): 1,2% Escritura de compra venta: 3,6% La alícuota mencionada debe ser aplicada sobre el valor fiscal ó valor de escrituración y/o sobre el valor inmobiliario de referencia (V.I.R.), el que resulte mayor; en el
+                            caso de los contratos de alquiler, la base imponible es la totalidad del contrato IVA incluído. En el caso de las escrituras, se encuentran exentos los inmuebles destinados a vivienda permanente y que constituyen la única propiedad en cabeza de cada uno de los adquirentes, y siempre que el valor de escrituración no sea mayor a los $750.000. Aquellas operaciones que estén excentas pero que superen el monto recientemente señalado, tributarán solo por el excedente. Generalmente el costo del impuesto es soportado y abonado por partes iguales entre comprador y vendedor; o locador y locatario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedorTest">
+            <div class="colapso">
+                <h2>Credito bancario</h2>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
+                    <h3>¿Qué se requiere para que una propiedad pueda ser comprada por crédito bancario?</h3>
+                  </button>
+                <div class="collapse" id="collapseExample6">
+                    <div class="card card-body text-left">
+                        <p>
+                            Para que una propiedad pueda ser comprada por crédito bancario se requiere que todos los metros construidos figuren en el plano de obra correspondiente.
+                            La propiedad debe estar a nombre de su titular.
+                            Su titular no puede estar inhibido. Si la propiedad está ubicada en provincia se debe hacer un estado parcelario previo hecho por agrimensor matriculado, requisito que no se requiere para propiedades de Capital Federal. En el caso de que se esté tramitando una sucesión, se requiere que esté hecha la        declaratoria de herederos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
 
@@ -161,5 +218,8 @@
             </div>
     </footer>
     <!--fin footer-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 </body>
 </html>
