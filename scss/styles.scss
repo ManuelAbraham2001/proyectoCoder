@@ -6,6 +6,12 @@ $negro: #000;
 $blanco: #fff;
 $gris: #494949;
 
+@mixin grid($columnas, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -342,11 +348,10 @@ html{
 }
 
 .propiedadesGrid{
-    display: grid;
+    @include grid(5, 20px);
     justify-items: center;
-    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    
 }
 
 .cartaPropiedades{
@@ -530,6 +535,21 @@ html{
 
 }
 
+$coloresRedes: (
+    red1: #4a6ea9,
+    red2: #ed2887,
+    red3: #cb2027,
+    red4:#4376b1,
+    key1 : value1,
+    );
+
+
+@each $red, $color in $coloresRedes {
+    .btn--#{$red}{
+        text-shadow: 0 0 10px $color ;
+    }
+}
+
 .terminos{
     background-color: $color1;
     display: flex;
@@ -542,6 +562,12 @@ html{
         text-decoration: none;
         color: $blanco;
     }
+}
+
+.terminos--nuveos{
+    @extend .terminos;
+    font-size: 15px;
+    font-weight: 900;
 }
 
 /* preguntas frecuentes */
@@ -576,6 +602,8 @@ html{
     border: none;
     border-bottom: 2px solid $color1;
 }
+
+
 
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus{
     background-color: $blanco;
@@ -1037,7 +1065,6 @@ textarea::-webkit-scrollbar{
 }
 
 .galeria{
-    display: grid;
     grid-template-areas: 
     "img1 img2 img2 img2"
     "img1 img4 img5 img3"
@@ -1045,7 +1072,7 @@ textarea::-webkit-scrollbar{
     "img7 img7 img7 img8"
     ;
 
-    grid-template-columns: repeat(4, 1fr);
+    @include grid(4, 0);
     grid-template-rows: 300px 200px 350px 350px;
     margin: 0 auto;
 }
@@ -1187,9 +1214,8 @@ textarea::-webkit-scrollbar{
     }
 
     .propiedadesGrid{
-        grid-template-columns: repeat(2, 1fr);
+        @include grid(2, 20px);
         grid-template-rows: repeat(3, 1fr);
-        gap: 20px;
     }
 
     .cartaPropiedades{
@@ -1550,7 +1576,7 @@ textarea::-webkit-scrollbar{
     }
         
     .galeria{
-        display: grid;
+        @include grid(2, 0);
         grid-template-areas: 
         "img1 img1"
         "img2 img2"
@@ -1560,8 +1586,7 @@ textarea::-webkit-scrollbar{
         "img7 img8"
         "img7 img8"
         ;
-        
-        grid-template-columns: repeat(2, 1fr);
+
         grid-template-rows: repeat(3, 250px);
         margin: 0 auto;
     }
@@ -1659,8 +1684,7 @@ textarea::-webkit-scrollbar{
     }
 
     .propiedadesGrid{
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+        @include grid(1, 10px);
     }
 
     .cartaPropiedades{
@@ -2052,7 +2076,7 @@ textarea::-webkit-scrollbar{
     }
     
     .galeria{
-        display: grid;
+        @include grid(2, 0);
         grid-template-areas: 
         "img1 img1"
         "img2 img2"
@@ -2062,8 +2086,6 @@ textarea::-webkit-scrollbar{
         "img7 img8"
         "img7 img8"
         ;
-    
-        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 250px);
         margin: 0 auto;
     }
