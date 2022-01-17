@@ -303,7 +303,7 @@ html{
 
 .box{
     display: block;
-    margin: auto;
+    margin: 0 25px;
     text-align: center;
     background-color: $blanco;
     padding: 30px;
@@ -458,7 +458,7 @@ html{
     &.elegirnos{
 
         & p{
-            margin-left: 20px;
+            margin-left: 0;
         }
         
     }
@@ -466,7 +466,7 @@ html{
     &.prestamos{
 
         & p{
-            margin-left: 20px;
+            margin-left: 0;
         }
 
     }
@@ -595,15 +595,17 @@ $coloresRedes: (
     justify-content: space-around;
 }
 
-.colapso button{
-    background-color: $blanco;
-    color: $color1;
-    font-weight: bold;
-    border: none;
-    border-bottom: 2px solid $color1;
+.colapso{
+
+    & button{
+        background-color: $blanco;
+        color: $color1;
+        font-weight: bold;
+        border: none;
+        border-bottom: 2px solid $color1;
+    }
+
 }
-
-
 
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus{
     background-color: $blanco;
@@ -622,9 +624,13 @@ $coloresRedes: (
     width: 100%
 }
 
-.collapse.show p{
-    font-size: 25px;
-    line-height: 50px;
+.collapse.show{
+
+    & p{
+        font-size: 25px;
+        line-height: 50px;
+    }
+
 }
 
 .colapso{
@@ -637,15 +643,20 @@ $coloresRedes: (
     padding: 20px;
 }
 
-.colapso h2{
-    margin: 0;
-    margin-bottom: 30px;
+.colapso{
+
+    & h2{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    & h3{
+        margin: 0;
+        font-size: 30px;
+    }
+
 }
 
-.colapso h3{
-    margin: 0;
-    font-size: 30px;
-}
 
 /* servicios */
 
@@ -684,7 +695,13 @@ $coloresRedes: (
 }
 
 .formularioServicios .step1 input{
-    width: 100%;
+
+    & .step1{
+        & input{
+            width: 100%;
+        }
+    }
+    
 }
 
 .cajaFormServicios{
@@ -711,15 +728,19 @@ $coloresRedes: (
     color: $negro;
 }
 
-.fondoServicios h2{
-    font-size: 3rem;
-    font-weight: 900;
+.fondoServicios{
+    & h2{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    & p{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
 }
 
-.fondoServicios p{
-    font-size: 2rem;
-    font-weight: 700;
-}
 
 .h2Servicios{
     text-align: center;
@@ -754,15 +775,24 @@ $coloresRedes: (
     width: 100%;
 }
 
-.cajaFormServicio select, .cajaFormServicio input{
-    margin: 10px 0;
-    width: 300px;
-    border: none;
-    border-bottom: 2px solid $color1;
-    padding: 5px;
-    color: $color1;
-    background-color: rgb(73, 73, 73); 
-    font-size: 1rem;
+.cajaFormServicio{
+
+    & select, & input{
+        margin: 10px 0;
+        width: 300px;
+        border: none;
+        border-bottom: 2px solid $color1;
+        padding: 5px;
+        color: $color1;
+        background-color: rgb(73, 73, 73); 
+        font-size: 1rem;
+    }
+
+    & label{
+        color: $color1;
+        font-weight: bold;
+    }
+
 }
 
 .cajaFormServicio input:hover{
@@ -781,27 +811,28 @@ $coloresRedes: (
 
 .cajaFormServicio select:focus{
     outline: none;
-    
 }
 
-.cajaFormServicio label{
-    color: $color1;
-    font-weight: bold;
+
+.contenidoServicio{
+    & .enviarBtn{
+        & input{
+            padding: 10px;
+            border: 1px solid $color1;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &:hover{
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
 }
 
-.contenidoServicio .enviarBtn input{
-    padding: 10px;
-    border: 1px solid $color1;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.contenidoServicio .enviarBtn input:hover{
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.2);
-}
 
 /* sobre nosotros */
 
@@ -809,16 +840,20 @@ $coloresRedes: (
     margin-top: 40px;
 }
 
-.cardNosotros img{
-    width: 90%;
-    height: 300px;
+.cardNosotros{
+    
+    & img{
+        width: 90%;
+    }
+
+    & .card-body{
+        width: 90%;
+        padding: 0;
+        margin-top: 10px;
+    }
+    
 }
 
-.cardNosotros .card-body{
-    width: 90%;
-    padding: 0;
-    margin-top: 10px;
-}
 
 .tituloNosotros{
     display: flex;
@@ -826,48 +861,49 @@ $coloresRedes: (
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    & h2{
+        margin-bottom: 10px;
+        font-size: 50px;
+        font-weight: 900;
+    }
+
+    & p{
+        font-size: 20px;
+        font-weight: bold;
+    }
 }
 
-.tituloNosotros h2{
-    margin-bottom: 10px;
-    font-size: 50px;
-    font-weight: 900;
-}
-
-.tituloNosotros p{
-    font-size: 20px;
-    font-weight: bold;
-}
-
+ 
 .contenedorNosotros{
     display: flex;
     justify-content: space-around;
-    
     min-height: 620px;
-}
-
-.cajaNosotros img{
-    height: 300px;
-    width: 450px;
 }
 
 .cajaNosotros{
     width: auto;
     height: auto;
-}
 
-.cajaNosotros p{
-    width: 450px;
-    line-height: 30px;
-    font-size: 15px;
-}
+    & img{
+        height: 300px;
+        width: 450px;
+    }
 
-.cajaNosotros h3{
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 30px;
-}
+    & p{
+        width: 450px;
+        line-height: 30px;
+        font-size: 15px;
+    }
 
+    & h3{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+}
+ 
 .contenedorLista{
     background-color: #ecd49f;
     min-height: 500px;
@@ -878,21 +914,23 @@ $coloresRedes: (
 
 .listaNosotros{
     text-align: center;
-}
 
-.listah2Nosotros h2{
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 50px;
-    font-weight: 900;
-}
+    & h2{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 50px;
+        font-weight: 900;
+    }
 
-.listaNosotros ul li{
-    margin-bottom: 15px;
-    font-size: 25px;
-    font-weight: 700;
-    list-style: disc;
-    text-align: left;
+    & ul{
+        & li{
+            margin-bottom: 15px;
+            font-size: 25px;
+            font-weight: 700;
+            list-style: disc;
+            text-align: left;
+        }
+    }
 }
 
 .marginFooterNosotros{
@@ -911,19 +949,20 @@ $coloresRedes: (
     align-items: center;
     text-align: center;
     padding: 30px;
+
+    & h2{
+        font-size: 50px;
+        margin-top: 10px;
+        font-weight: 900;
+    }
+
+    p{
+        font-size: 25px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
 }
 
-.tituloContacto h2{
-    font-size: 50px;
-    margin-top: 10px;
-    font-weight: 900;
-}
-
-.tituloContacto p{
-    font-size: 25px;
-    margin-top: 10px;
-    font-weight: 700;
-}
 
 iframe{
     width: 500px;
@@ -953,30 +992,41 @@ iframe{
     justify-content: space-around;
 }
 
-.step1Contacto{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px 0;
+.formularioContacto{
+    & .step1Contacto{
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px 0;
+
+        & .cajaContacto{
+
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & label{
+
+                font-size: 18px;
+                color: #ECC47C;
+                font-weight: bold;
+
+            }
+        }
+    }
 }
 
-.cajaContacto{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+.formularioContacto{
+    & .mensajeContacto{
+        & label{
+            font-size: 18px;
+            color: #ECC47C;
+            font-weight: bold;
+        }
+    }
 
-.formularioContacto .step1Contacto .cajaContacto label{
-    font-size: 18px;
-    color: #ECC47C;
-    font-weight: bold;
-}
-
-.formularioContacto .mensajeContacto label{
-    font-size: 18px;
-    color: #ECC47C;
-    font-weight: bold;
 }
 
 .formularioContacto .step1Contacto .cajaContacto input, textarea{
@@ -1055,13 +1105,13 @@ textarea::-webkit-scrollbar{
     width: 90%;
     height: auto;
     margin: 0 auto;
-}
 
-.contenedorGaleria h1{
-    margin: 40px auto;
-    text-align: center;
-    font-size: 60px;
-    text-transform: uppercase;
+    & h1{
+        margin: 40px auto;
+        text-align: center;
+        font-size: 60px;
+        text-transform: uppercase;
+    }
 }
 
 .galeria{
@@ -1128,9 +1178,22 @@ textarea::-webkit-scrollbar{
 }
 
 
-@media only screen and (min-width: 481px) and (max-width: 768px){
+@media only screen and (min-width: 481px) and (max-width: 1200px){
 
     /* header */
+
+    .navbar-dark  {
+
+        & .navbar-nav{
+
+            & .nav-link{
+                margin: 0 5px;
+                font-size: 15px;
+            }
+
+        }
+
+    }
 
     .navbar-collapse{
         &.collapse{
@@ -1248,11 +1311,12 @@ textarea::-webkit-scrollbar{
 
         & p{
             order: 1;
-            max-width: 700px;
+            min-width: 100%;
             text-align: left;
             line-height: 30px;
             font-size: 1.2rem;
             margin-top: 20px;
+            margin-left: 0 !important;
         }
 
         & img{
@@ -1316,9 +1380,13 @@ textarea::-webkit-scrollbar{
 
     /* preguntas frecuentes */
 
-    .preguntasTitulo h2{
-        font-size: 2rem;
-        text-align: center;
+    .preguntasTitulo{
+
+        & h2{
+            font-size: 2rem;
+            text-align: center;
+        }
+
     }
 
     .contenedorPreguntas{
@@ -1332,37 +1400,43 @@ textarea::-webkit-scrollbar{
     }
 
     .collapse.show p{
-        font-size: 1.2rem;
+        
+        & p{
+            font-size: 1.2rem;
+        }
+        
     }
 
     /* sobre nosotros */
 
     .contenedorNosotros{
         width: 100%;
-    }
-
-    .cardNosotros img{
-        width: 90%;
-        height: 100%;
-    }
-
-    .tituloNosotros h2{
-        margin-bottom: 20px;
-        font-size: 1.9rem;
-    }
-    
-    .contenedorNosotros{
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
-    .cajaNosotros img{
-        height: 80%;
-        width: 80%;
+
+    .cardNosotros{
+
+        & img{
+            width: 90%;
+            height: 100%;
+        }
+
+    }
+
+    .tituloNosotros {
+
+        & h2{
+            margin-bottom: 20px;
+            font-size: 1.9rem;
+        }
+
     }
     
+    
     .cajaNosotros{
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1370,41 +1444,51 @@ textarea::-webkit-scrollbar{
         width: 100%;
         height: auto;
         margin-bottom: 20px;
-    }
-    
-    .cajaNosotros p{
-        width: 80%;
-        line-height: 20px;
-        font-size: .9rem;
-        margin-top: 10px;
-    }
-    
-    .cajaNosotros h3{
-        margin-bottom: 20px;
-    }
+
+        & p{
+            width: 80%;
+            line-height: 20px;
+            font-size: .9rem;
+            margin-top: 10px;
+        }
+
+        & img{
+            height: 80%;
+            width: 80%;
+        }
+
+        & h3{
+            margin-bottom: 20px;
+        }
+
+    } 
     
     .listaNosotros{
         text-align: center;
-        width: 100%
-    }
-    
-    .listah2Nosotros h2{
-        font-size: 1.3rem;
-        margin: 20px 0;
-    }
+        width: 100%;
 
-    .listaNosotros ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        & ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & li{
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                list-style: disc;
+                width: 80%;
+            }
+        }
     }
     
-    .listaNosotros ul li{
-        margin-bottom: 15px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        list-style: disc;
-        width: 80%;
+    .listah2Nosotros{
+
+        & h2{
+            font-size: 1.3rem;
+            margin: 20px 0;
+        }
+
     }
 
     /* servicios */
@@ -1414,18 +1498,18 @@ textarea::-webkit-scrollbar{
         background-position: calc(100% - 30%);
         font-size: 20px;
         text-align: center;
-    }
 
-    .fondoServicios h2{
-        font-size: 2.5rem;
-        font-weight: 900;
+        & h2{
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+
+        & p{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
     }
     
-    .fondoServicios p{
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-
     .escritorio{
         flex-direction: column;
     }
@@ -1458,15 +1542,18 @@ textarea::-webkit-scrollbar{
         width: 80%;
     }
 
-    .cajaFormServicio select, .cajaFormServicio input{
-        margin: 10px 0;
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid $color1;
-        padding: 5px;
-        color: $color1;
-        background-color: rgb(73, 73, 73); 
-        font-size: 1rem;
+    .cajaFormServicio{
+        & select, input{
+            margin: 10px 0;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid $color1;
+            padding: 5px;
+            color: $color1;
+            background-color: rgb(73, 73, 73); 
+            font-size: 1rem;
+        }
+
     }
 
     .cajaFormServicio input::placeholder{
@@ -1499,14 +1586,19 @@ textarea::-webkit-scrollbar{
 
     /* contacto */
 
-    .tituloContacto h2{
-        font-size: 2.2rem;
+    .tituloContacto{
+
+        & h2{
+            font-size: 2.2rem;
+        }
+
+        & p{
+            font-size: 1.3rem;
+        }
+        
     }
     
-    .tituloContacto p{
-        font-size: 1.3rem;
-    }
-    
+     
     .contenedorContacto{
         flex-direction: column-reverse;
     }
@@ -1519,8 +1611,13 @@ textarea::-webkit-scrollbar{
         width: 85%;
     }
     
-    .step1Contacto .cajaContacto.mensaje{
-         width: 85%;
+    .step1Contacto{
+        & .cajaContacto{
+            &.mensaje{
+                width: 85%;
+            }
+        }
+         
     }
     
     .formularioContacto{
@@ -1531,11 +1628,12 @@ textarea::-webkit-scrollbar{
     .step1Contacto{
         flex-direction: column;
         margin: 0;
+
+        & label, input{
+            margin: 10px 0;
+        }
     }
     
-    .step1Contacto label, input{
-        margin: 10px 0;
-    }
     
     .cajaContacto{
         margin: 20px 0;
@@ -1546,18 +1644,25 @@ textarea::-webkit-scrollbar{
         justify-content: center;
         margin: 30px 0;
         width: 100%;
+
+        & iframe{
+            width: 90%;
+            height: 400px;
+        }
     }
     
-    .iframeUbicacion iframe{
-        width: 90%;
-        height: 400px;
-    }
-    
-    .step1Contacto .cajaContacto .enviarBtn input{
-        width: 100%;
-        border-bottom: none;
-        border: 1px solid $color1;
-        padding: 10px;
+    .step1Contacto{
+        & .cajaContacto{
+            & .enviarBtn{
+                & input{
+                    width: 100%;
+                    border-bottom: none;
+                    border: 1px solid $color1;
+                    padding: 10px;
+                }   
+            }
+        }
+
     }
     
     /* contenedor galeria grid area */
@@ -1566,13 +1671,14 @@ textarea::-webkit-scrollbar{
         width: 90%;
         height: auto;
         margin: 0 auto;
-    }
-        
-    .contenedorGaleria h1{
-        margin: 40px auto;
-        text-align: center;
-        font-size: 0.9rem;
-        text-transform: uppercase;
+
+        & h1{
+            margin: 40px auto;
+            text-align: center;
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            line-height: normal !important;
+        }
     }
         
     .galeria{
@@ -1587,7 +1693,7 @@ textarea::-webkit-scrollbar{
         "img7 img8"
         ;
 
-        grid-template-rows: repeat(3, 250px);
+        grid-template-rows: repeat(7, 200px);
         margin: 0 auto;
     }
 
@@ -1807,12 +1913,12 @@ textarea::-webkit-scrollbar{
 
     .preguntasTitulo{
         padding: 20px;
-    }
 
-    .preguntasTitulo h2{
-        font-size: 2rem;
-        text-align: center;
-    }
+        & h2{
+            font-size: 2rem;
+            text-align: center;
+        }
+    } 
 
     .contenedorPreguntas{
         flex-direction: column;
@@ -1822,15 +1928,19 @@ textarea::-webkit-scrollbar{
     .cajaPreguntas{
         width: auto;
         margin: 20px 0;
-    }
 
-    .cajaPreguntas p{
-        font-size: .9rem;
+        & p{
+            font-size: .9rem;
+        }
     }
 
     .collapse.show p{
-        font-size: 15px;
-        line-height: 25px;
+        &.show{
+            & p{
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
     }
        
 
@@ -1840,17 +1950,17 @@ textarea::-webkit-scrollbar{
         height: 200px;
         background-position: calc(100% - 30%);
         text-align: center;
-    }
 
-    .fondoServicios h2{
-        font-size: 1.5rem;
-        font-weight: 900;
-    }
-    
-    .fondoServicios p{
-        font-size: 1rem;
-        font-weight: 700;
-    }
+        & h2{
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        & p{
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    } 
 
     .escritorio{
         flex-direction: column;
@@ -1884,15 +1994,19 @@ textarea::-webkit-scrollbar{
         width: 80%;
     }
 
-    .cajaFormServicio select, .cajaFormServicio input{
-        margin: 10px 0;
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid #ECC47C;
-        padding: 5px;
-        color: #ECC47C;
-        background-color: rgb(73, 73, 73); 
-        font-size: 1rem;
+    .cajaFormServicio{
+
+        & select, input{
+            margin: 10px 0;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #ECC47C;
+            padding: 5px;
+            color: #ECC47C;
+            background-color: rgb(73, 73, 73); 
+            font-size: 1rem;
+        }
+
     }
 
     .cajaFormServicio input::placeholder{
@@ -1925,32 +2039,30 @@ textarea::-webkit-scrollbar{
 
     /* sobre nosotros */
 
-    .cardNosotros img{
-        width: 90%;
-        height: 100%;
+    .cardNosotros{
+        & img{
+            width: 90%;
+            height: 100%;
+        }
     }
 
     .contenedorNosotros{
         width: 100%;
-    }
-
-    .tituloNosotros h2{
-        margin-bottom: 20px;
-        font-size: 1.9rem;
-    }
-    
-    .contenedorNosotros{
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
-    .cajaNosotros img{
-        height: 90%;
-        width: 90%;
+
+    .tituloNosotros{
+        & h2{
+            margin-bottom: 20px;
+            font-size: 1.9rem;
+        }
     }
     
+    
     .cajaNosotros{
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1958,22 +2070,44 @@ textarea::-webkit-scrollbar{
         width: 100%;
         height: auto;
         margin-bottom: 20px;
+
+        & img{
+            height: 90%;
+            width: 90%;
+        }
+
+        & p{
+            width: 90%;
+            line-height: 20px;
+            font-size: .8rem;
+            margin-top: 10px;
+        }
+
+        & h3{
+            margin-bottom: 20px;
+        }
+
     }
-    
-    .cajaNosotros p{
-        width: 90%;
-        line-height: 20px;
-        font-size: .8rem;
-        margin-top: 10px;
-    }
-    
-    .cajaNosotros h3{
-        margin-bottom: 20px;
-    }
+
     
     .listaNosotros{
         text-align: center;
-        width: 100%
+        width: 100%;
+
+        & ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & li{
+                margin-bottom: 15px;
+                font-size: .9rem;
+                font-weight: 700;
+                list-style: disc;
+                max-width: 250px;
+            }
+
+        }
     }
     
     .listah2Nosotros h2{
@@ -1981,28 +2115,18 @@ textarea::-webkit-scrollbar{
         margin: 20px 0;
     }
 
-    .listaNosotros ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .listaNosotros ul li{
-        margin-bottom: 15px;
-        font-size: .9rem;
-        font-weight: 700;
-        list-style: disc;
-        max-width: 250px;
-    }
-
     /* contacto */
 
-    .tituloContacto h2{
-        font-size: 2rem;
-    }
-    
-    .tituloContacto p{
-        font-size: 1rem;
+    .tituloContacto{
+
+        & h2{
+            font-size: 2rem;
+        }
+
+        & p{
+            font-size: 1rem;
+        }
+        
     }
 
     .contenedorContacto{
@@ -2014,11 +2138,17 @@ textarea::-webkit-scrollbar{
     }
 
     .cajaContacto{
-        width: 85%;
+        width: 85% !important;
     }
 
-    .step1Contacto .cajaContacto.mensaje{
-        width: 85%;
+    .step1Contacto{
+
+        &.cardContacto{
+            &.mensaje{
+                width: 85%;
+            }
+        }
+        
     }
 
     .formularioContacto{
@@ -2031,8 +2161,12 @@ textarea::-webkit-scrollbar{
         margin: 0;
     }
 
-    .step1Contacto label, input{
-        margin: 10px 0;
+    .step1Contacto{
+
+        & label, input{
+            margin: 10px 0;
+        }
+        
     }
 
     .cajaContacto{
@@ -2044,20 +2178,28 @@ textarea::-webkit-scrollbar{
         justify-content: center;
         margin: 30px 0;
         width: 100%;
+
+        & iframe{
+            width: 90%;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
-    .iframeUbicacion iframe{
-        width: 90%;
-        height: 400px;
-        align-items: center;
-        justify-content: center;
-    }
+    .step1Contacto{
+        & .cajaContacto{
+            
+            & .enviarBtn{
+                & input{
+                    width: 100%;
+                    border-bottom: none;
+                    border: 1px solid #ECC47C;
+                    padding: 10px;
+                }
+            }
+        }
 
-    .step1Contacto .cajaContacto .enviarBtn input{
-        width: 100%;
-        border-bottom: none;
-        border: 1px solid #ECC47C;
-        padding: 10px;
     }
 
     /* contenedor galeria grid area */
@@ -2066,13 +2208,14 @@ textarea::-webkit-scrollbar{
         width: 90%;
         height: auto;
         margin: 0 auto;
-    }
-    
-    .contenedorGaleria h1{
-        margin: 40px auto;
-        text-align: center;
-        font-size: 1.9rem;
-        text-transform: uppercase;
+
+        & h1{
+            margin: 40px auto;
+            text-align: center;
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            line-height: normal !important;
+        }
     }
     
     .galeria{
@@ -2086,7 +2229,7 @@ textarea::-webkit-scrollbar{
         "img7 img8"
         "img7 img8"
         ;
-        grid-template-rows: repeat(3, 250px);
+        grid-template-rows: repeat(7, 150px);
         margin: 0 auto;
     }
 }

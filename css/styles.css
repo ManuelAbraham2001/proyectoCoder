@@ -234,7 +234,7 @@ a.nav-link {
 }
 .box {
   display: block;
-  margin: auto;
+  margin: 0 25px;
   text-align: center;
   background-color: #fff;
   padding: 30px;
@@ -360,10 +360,10 @@ a.nav-link {
   margin-left: 20px;
 }
 .intro.elegirnos p {
-  margin-left: 20px;
+  margin-left: 0;
 }
 .intro.prestamos p {
-  margin-left: 20px;
+  margin-left: 0;
 }
 .intro p {
   max-width: 500px;
@@ -518,7 +518,6 @@ a.nav-link {
   margin: 0;
   margin-bottom: 30px;
 }
-
 .colapso h3 {
   margin: 0;
   font-size: 30px;
@@ -559,7 +558,7 @@ a.nav-link {
   margin: 10px 0;
 }
 
-.formularioServicios .step1 input {
+.formularioServicios .step1 input .step1 input {
   width: 100%;
 }
 
@@ -590,7 +589,6 @@ a.nav-link {
   font-size: 3rem;
   font-weight: 900;
 }
-
 .fondoServicios p {
   font-size: 2rem;
   font-weight: 700;
@@ -639,6 +637,10 @@ a.nav-link {
   background-color: #494949;
   font-size: 1rem;
 }
+.cajaFormServicio label {
+  color: #ECC47C;
+  font-weight: bold;
+}
 
 .cajaFormServicio input:hover {
   background-color: rgba(255, 255, 255, 0.2);
@@ -658,11 +660,6 @@ a.nav-link {
   outline: none;
 }
 
-.cajaFormServicio label {
-  color: #ECC47C;
-  font-weight: bold;
-}
-
 .contenidoServicio .enviarBtn input {
   padding: 10px;
   border: 1px solid #ECC47C;
@@ -671,7 +668,6 @@ a.nav-link {
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .contenidoServicio .enviarBtn input:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
@@ -684,9 +680,7 @@ a.nav-link {
 
 .cardNosotros img {
   width: 90%;
-  height: 300px;
 }
-
 .cardNosotros .card-body {
   width: 90%;
   padding: 0;
@@ -700,13 +694,11 @@ a.nav-link {
   justify-content: center;
   align-items: center;
 }
-
 .tituloNosotros h2 {
   margin-bottom: 10px;
   font-size: 50px;
   font-weight: 900;
 }
-
 .tituloNosotros p {
   font-size: 20px;
   font-weight: bold;
@@ -718,22 +710,19 @@ a.nav-link {
   min-height: 620px;
 }
 
-.cajaNosotros img {
-  height: 300px;
-  width: 450px;
-}
-
 .cajaNosotros {
   width: auto;
   height: auto;
 }
-
+.cajaNosotros img {
+  height: 300px;
+  width: 450px;
+}
 .cajaNosotros p {
   width: 450px;
   line-height: 30px;
   font-size: 15px;
 }
-
 .cajaNosotros h3 {
   text-align: center;
   margin-bottom: 10px;
@@ -751,14 +740,12 @@ a.nav-link {
 .listaNosotros {
   text-align: center;
 }
-
-.listah2Nosotros h2 {
+.listaNosotros h2 {
   text-align: center;
   font-size: 40px;
   margin-bottom: 50px;
   font-weight: 900;
 }
-
 .listaNosotros ul li {
   margin-bottom: 15px;
   font-size: 25px;
@@ -783,13 +770,11 @@ a.nav-link {
   text-align: center;
   padding: 30px;
 }
-
 .tituloContacto h2 {
   font-size: 50px;
   margin-top: 10px;
   font-weight: 900;
 }
-
 .tituloContacto p {
   font-size: 25px;
   margin-top: 10px;
@@ -824,20 +809,18 @@ iframe {
   justify-content: space-around;
 }
 
-.step1Contacto {
+.formularioContacto .step1Contacto {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 10px 0;
 }
-
-.cajaContacto {
+.formularioContacto .step1Contacto .cajaContacto {
   width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .formularioContacto .step1Contacto .cajaContacto label {
   font-size: 18px;
   color: #ECC47C;
@@ -926,7 +909,6 @@ textarea::-webkit-scrollbar {
   height: auto;
   margin: 0 auto;
 }
-
 .contenedorGaleria h1 {
   margin: 40px auto;
   text-align: center;
@@ -993,8 +975,13 @@ textarea::-webkit-scrollbar {
   background-image: url(../img/img8.jpg);
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
   /* header */
+  .navbar-dark .navbar-nav .nav-link {
+    margin: 0 5px;
+    font-size: 15px;
+  }
+
   .navbar-collapse.collapse.show a.nav-link {
     margin: 5px 0;
   }
@@ -1077,11 +1064,12 @@ textarea::-webkit-scrollbar {
   }
   .intro p {
     order: 1;
-    max-width: 700px;
+    min-width: 100%;
     text-align: left;
     line-height: 30px;
     font-size: 1.2rem;
     margin-top: 20px;
+    margin-left: 0 !important;
   }
   .intro img {
     order: 0;
@@ -1146,13 +1134,16 @@ textarea::-webkit-scrollbar {
     margin: 20px 0;
   }
 
-  .collapse.show p {
+  .collapse.show p p {
     font-size: 1.2rem;
   }
 
   /* sobre nosotros */
   .contenedorNosotros {
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .cardNosotros img {
@@ -1165,17 +1156,6 @@ textarea::-webkit-scrollbar {
     font-size: 1.9rem;
   }
 
-  .contenedorNosotros {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cajaNosotros img {
-    height: 80%;
-    width: 80%;
-  }
-
   .cajaNosotros {
     display: flex;
     flex-direction: column;
@@ -1185,14 +1165,16 @@ textarea::-webkit-scrollbar {
     height: auto;
     margin-bottom: 20px;
   }
-
   .cajaNosotros p {
     width: 80%;
     line-height: 20px;
     font-size: 0.9rem;
     margin-top: 10px;
   }
-
+  .cajaNosotros img {
+    height: 80%;
+    width: 80%;
+  }
   .cajaNosotros h3 {
     margin-bottom: 20px;
   }
@@ -1201,24 +1183,22 @@ textarea::-webkit-scrollbar {
     text-align: center;
     width: 100%;
   }
-
-  .listah2Nosotros h2 {
-    font-size: 1.3rem;
-    margin: 20px 0;
-  }
-
   .listaNosotros ul {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .listaNosotros ul li {
     margin-bottom: 15px;
     font-size: 1.2rem;
     font-weight: 700;
     list-style: disc;
     width: 80%;
+  }
+
+  .listah2Nosotros h2 {
+    font-size: 1.3rem;
+    margin: 20px 0;
   }
 
   /* servicios */
@@ -1228,12 +1208,10 @@ textarea::-webkit-scrollbar {
     font-size: 20px;
     text-align: center;
   }
-
   .fondoServicios h2 {
     font-size: 2.5rem;
     font-weight: 900;
   }
-
   .fondoServicios p {
     font-size: 1.5rem;
     font-weight: 700;
@@ -1314,7 +1292,6 @@ textarea::-webkit-scrollbar {
   .tituloContacto h2 {
     font-size: 2.2rem;
   }
-
   .tituloContacto p {
     font-size: 1.3rem;
   }
@@ -1344,8 +1321,7 @@ textarea::-webkit-scrollbar {
     flex-direction: column;
     margin: 0;
   }
-
-  .step1Contacto label, input {
+  .step1Contacto label, .step1Contacto input {
     margin: 10px 0;
   }
 
@@ -1359,7 +1335,6 @@ textarea::-webkit-scrollbar {
     margin: 30px 0;
     width: 100%;
   }
-
   .iframeUbicacion iframe {
     width: 90%;
     height: 400px;
@@ -1378,12 +1353,12 @@ textarea::-webkit-scrollbar {
     height: auto;
     margin: 0 auto;
   }
-
   .contenedorGaleria h1 {
     margin: 40px auto;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.9rem;
     text-transform: uppercase;
+    line-height: normal !important;
   }
 
   .galeria {
@@ -1391,7 +1366,7 @@ textarea::-webkit-scrollbar {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
     grid-template-areas: "img1 img1" "img2 img2" "img3 img4" "img5 img6" "img5 img6" "img7 img8" "img7 img8";
-    grid-template-rows: repeat(3, 250px);
+    grid-template-rows: repeat(7, 200px);
     margin: 0 auto;
   }
 }
@@ -1557,7 +1532,6 @@ textarea::-webkit-scrollbar {
   .preguntasTitulo {
     padding: 20px;
   }
-
   .preguntasTitulo h2 {
     font-size: 2rem;
     text-align: center;
@@ -1572,12 +1546,11 @@ textarea::-webkit-scrollbar {
     width: auto;
     margin: 20px 0;
   }
-
   .cajaPreguntas p {
     font-size: 0.9rem;
   }
 
-  .collapse.show p {
+  .collapse.show p.show p {
     font-size: 15px;
     line-height: 25px;
   }
@@ -1588,12 +1561,10 @@ textarea::-webkit-scrollbar {
     background-position: 70%;
     text-align: center;
   }
-
   .fondoServicios h2 {
     font-size: 1.5rem;
     font-weight: 900;
   }
-
   .fondoServicios p {
     font-size: 1rem;
     font-weight: 700;
@@ -1678,22 +1649,14 @@ textarea::-webkit-scrollbar {
 
   .contenedorNosotros {
     width: 100%;
-  }
-
-  .tituloNosotros h2 {
-    margin-bottom: 20px;
-    font-size: 1.9rem;
-  }
-
-  .contenedorNosotros {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .cajaNosotros img {
-    height: 90%;
-    width: 90%;
+  .tituloNosotros h2 {
+    margin-bottom: 20px;
+    font-size: 1.9rem;
   }
 
   .cajaNosotros {
@@ -1705,14 +1668,16 @@ textarea::-webkit-scrollbar {
     height: auto;
     margin-bottom: 20px;
   }
-
+  .cajaNosotros img {
+    height: 90%;
+    width: 90%;
+  }
   .cajaNosotros p {
     width: 90%;
     line-height: 20px;
     font-size: 0.8rem;
     margin-top: 10px;
   }
-
   .cajaNosotros h3 {
     margin-bottom: 20px;
   }
@@ -1721,18 +1686,11 @@ textarea::-webkit-scrollbar {
     text-align: center;
     width: 100%;
   }
-
-  .listah2Nosotros h2 {
-    font-size: 1.2rem;
-    margin: 20px 0;
-  }
-
   .listaNosotros ul {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .listaNosotros ul li {
     margin-bottom: 15px;
     font-size: 0.9rem;
@@ -1741,11 +1699,15 @@ textarea::-webkit-scrollbar {
     max-width: 250px;
   }
 
+  .listah2Nosotros h2 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+
   /* contacto */
   .tituloContacto h2 {
     font-size: 2rem;
   }
-
   .tituloContacto p {
     font-size: 1rem;
   }
@@ -1759,10 +1721,10 @@ textarea::-webkit-scrollbar {
   }
 
   .cajaContacto {
-    width: 85%;
+    width: 85% !important;
   }
 
-  .step1Contacto .cajaContacto.mensaje {
+  .step1Contacto.cardContacto.mensaje {
     width: 85%;
   }
 
@@ -1776,7 +1738,7 @@ textarea::-webkit-scrollbar {
     margin: 0;
   }
 
-  .step1Contacto label, input {
+  .step1Contacto label, .step1Contacto input {
     margin: 10px 0;
   }
 
@@ -1790,7 +1752,6 @@ textarea::-webkit-scrollbar {
     margin: 30px 0;
     width: 100%;
   }
-
   .iframeUbicacion iframe {
     width: 90%;
     height: 400px;
@@ -1811,12 +1772,12 @@ textarea::-webkit-scrollbar {
     height: auto;
     margin: 0 auto;
   }
-
   .contenedorGaleria h1 {
     margin: 40px auto;
     text-align: center;
     font-size: 1.9rem;
     text-transform: uppercase;
+    line-height: normal !important;
   }
 
   .galeria {
@@ -1824,7 +1785,7 @@ textarea::-webkit-scrollbar {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
     grid-template-areas: "img1 img1" "img2 img2" "img3 img4" "img5 img6" "img5 img6" "img7 img8" "img7 img8";
-    grid-template-rows: repeat(3, 250px);
+    grid-template-rows: repeat(7, 150px);
     margin: 0 auto;
   }
 }
